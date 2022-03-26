@@ -8,7 +8,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case BUY_CAKE: return {
         ...state,
-        number: state.number > 0 ? state.number -1 : 0
+        number: state.number > 0 ? state.number - action.payload : 0
     }
     default: return state
   }
